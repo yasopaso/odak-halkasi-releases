@@ -1,0 +1,9 @@
+release-assets/
+*.exe
+*.zip
+*.db
+*.bak
+*.log
+__pycache__/
+.DS_Store
+Thumbs.db

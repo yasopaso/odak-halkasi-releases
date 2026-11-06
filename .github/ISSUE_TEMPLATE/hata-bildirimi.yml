@@ -1,0 +1,49 @@
+name: Hata bildirimi
+description: Çalışmayan veya beklediğin gibi davranmayan bir şeyi bildir.
+title: "[Hata]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Sorunu kısaca anlatman yeterli. Bu bildirim herkese açık görünür; veritabanı/yedek dosyanı ekleme. Ekran görüntüsünde kişisel bilgilerin varsa gizle.
+  - type: input
+    id: version
+    attributes:
+      label: Odak Halkası sürümü
+      value: 0.1.0-beta.1
+    validations:
+      required: true
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Windows sürümü
+      options:
+        - Windows 11
+        - Windows 10
+        - Bilmiyorum
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Ne oldu, ne olmasını bekliyordun?
+      placeholder: Örneğin küçük pencereye tıklayınca ana pencere de öne geldi.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Sorunu nasıl tekrar görebiliriz?
+      placeholder: |
+        1. Odaklan bölümünü açtım.
+        2. Çalışmayı başlattım.
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Ek bilgi veya ekran görüntüsü
+      description: İsteğe bağlı. Hata mesajını ya da ekran görüntüsünü buraya ekleyebilirsin.
+    validations:
+      required: false
